@@ -10,7 +10,9 @@ First you need to grant permissions to execute the file as the owner as shown be
 
 Then run it as follows:   
 
-  `./cluster.sh`    
+  `source . ./cluster.sh && update`   use this command to call the `update` function to update packages in a repository.  
+  
+  
   
   
 
