@@ -1,7 +1,7 @@
 # couchbase-cli-bash-script
 This project shows how to integrate couchbase-cli into a bash script to automate cluster initialization, create buckets and delete bucket in a coucuhbase cluster.
 
-Please before you execute this script, make sure you have installed couchbase server on your machine from their (https://www.couchbase.com/downloads)[website]
+Please before you execute this script, make sure you have installed couchbase server on your machine from their (website)[https://www.couchbase.com/downloads]
 
 
 ## How to run bash script:    
