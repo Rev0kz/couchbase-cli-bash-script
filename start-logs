@@ -1,1 +1,18 @@
+#!/bin/bash
 
+
+start-logs  ()    
+
+{      
+
+     read  -p   “enter the hostname for the cluster               :”     hostname
+     read   -p   “enter the username for the administrator        :”   username 
+     read  -p  “enter the password for the administrator          :”    password
+     read  -p    “enter the  node to collect logs from            :”    node 
+
+
+     couchbase-cli  collect-logs-start  -c  $hostname  --username $username  --password $password  --nodes  $node        
+
+     }      
+
+exit 0
