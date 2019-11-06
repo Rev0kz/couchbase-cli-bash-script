@@ -1,0 +1,16 @@
+#!bin/bash
+set-indexes   ()
+
+{   
+     read  -p  “enter the hostname for the cluster            :”      hostname  
+     read  -p  “enter the username for the system administrator           :”   username 
+     read  -p  “enter the password of the system administrator             :”    password
+     read  -p  “enter the maximum number of rollback points                :”    rollback
+     read  -p  “enter the specified value for persisted snapshot for recovery in seconds            :”   recovery 
+     read  -p  “enter the specified value for the log level                         :”  loglevel     
+     
+     couchbase-cli  setting-index  -c  $hostname  --username $username --password $password  --index-max-rollback-points  rollback  --index-log-level  $loglevel  
+
+     }   
+     
+exit 0
