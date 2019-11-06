@@ -10,11 +10,12 @@ First you need to grant permissions to execute the file as the owner as shown be
 
 `chmod 700  cluster.sh create-bucket.sh   delete-bucket.sh` 
 
-Then run it as follows:  ###assuming you want to call the update function to update packages in the repository.
+Then run it as follows: 
 
-  `source . ./cluster.sh && update`   use this command to call the `update` function to update packages in a repository.  
-  
-  You execute other functions by using the above command and replacing it the `update ()`  function.
+`./couch.sh`
+
+
+You need to run this script as a root user.
   
   
   
