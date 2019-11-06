@@ -1,0 +1,24 @@
+#!bin/bash  
+
+mail-alert   ()   
+
+{   
+     read  -p  “enter the hostname for the cluster            :”      hostname
+  
+     read  -p  “enter the username for the system administrator           :”   username 
+     read  -p    “enter the password of the system administrator          :”   password 
+     read -p   “enter the number 1 to enable email alert                       :”    mail
+     read -p   “specify email user                                                         :”    user
+     read  -p   “‘specify the password of email user                            :”    mpass
+    read  -p    “specify the email server hostname                            :”    mserver  
+    read  -p    “specify  the email server port                                      :”   mport 
+    read  -p   “specify the receiver name                                           :”   receiver
+    read  -p    “specify the name of the sender                                :”    sender
+    read  -p    “Do you want to enable email encryption                    :”    crypt
+ 
+
+couchbase-cli  setting-alert  -c  $hostname  --user  $username  --password $password --enable-email-alert $mail  --email-user $user  --email-password $mpass  --email-host $mserver
+--email-port  $mport  --email-recipients  $receiver  --email-sender $sender  --enable-email-encrypt  $crypt       
+
+      }    
+
