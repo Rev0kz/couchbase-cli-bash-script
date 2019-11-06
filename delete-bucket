@@ -1,0 +1,19 @@
+#!bin/bash
+
+ {  
+
+      #specify your host name
+     read -p "enter host name: " hostname
+     #specify your username
+     read -p "enter username:  " name  
+     #specify username password
+     read  -p "username password:   "  password
+     #specify bucket name  
+     read -p "enter bucket: "  bucket
+
+
+   couchbase-cli bucket-delete  -c $hostname  --username $name  --password  $password     --bucket  $bucket
+
+}
+
+exit 0
