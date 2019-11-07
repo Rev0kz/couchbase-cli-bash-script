@@ -146,7 +146,7 @@ couchbase-cli  setting-alert  -c  $hostname  --user  $username  --password $pass
 
 }
 
-select opts in "update" "initialize-cluster" "create-bucket" “start-logs” “set-indexes”  \ “mail-alert”  “delete-bucket” 
+select opts in "update" "initialize-cluster" "create-bucket" “start-logs” “set-indexes” “mail-alert” “delete-bucket” "exit script" 
 do
         case $opts in
                 "Update packages in a repository")
@@ -155,24 +155,24 @@ do
                 "Initialize a cluster in couchbase server")
                                 echo -e "\e[0;32m $(list) \e[m"
                                 ;;
-                        “Create a bucket in a couchbase cluster”)
+                “Create a bucket in a couchbase cluster”)
                                     echo -e “\e[0;32m $(create-bucket) \e[m”
                                     ;;    
-                         “Collects logs in a couchbase cluster”) 
+                 “Collects logs in a couchbase cluster”) 
                                     echo -e “\e[0;32m $(start-logs) \e[m”   
                                      ;;  
-                         “Set indexes in a couchbase cluster”)  
+                 “Set indexes in a couchbase cluster”)  
                                      echo -e “\e[0;32m $(start-logs) \e[m” 
                                      ;;   
-                          “Enable mail alert in a couchbase cluster”)  
+                 “Enable mail alert in a couchbase cluster”)  
                                      echo -e “\e[0;32m $(mail-alert) \e[m” 
                                      ;; 
-                         “Delete a bucket cluster”)  
+                 “Delete a bucket cluster”)  
                                      echo -e “\e[0;32m $(start-logs) \e[m” 
                                      ;;  
-                "Exit script")
-                                break
-                                ;;
+                "exit script")
+                                    break
+                                    ;;
                 *)
                                  echo "invalid option"
                                 ;;
